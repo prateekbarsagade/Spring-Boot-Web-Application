@@ -40,7 +40,7 @@ public class UserService {
 
     public User createAdmin(User user){
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        user.setRole(Arrays.asList("USER" , "ADMIN"));
+        user.setRole(Arrays.asList("ADMIN"));
         userRepository.save(user);
         return user;
     }

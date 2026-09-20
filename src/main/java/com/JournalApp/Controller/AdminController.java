@@ -19,14 +19,18 @@ public class AdminController {
 
 
     @GetMapping("/all-user")
-    public ResponseEntity<?> getAllUser(){
-
-        List<User> all = userService.getAll();
-        if(all != null && all.isEmpty()){
-            return new ResponseEntity<>(HttpStatus.OK);
-        }
-
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//    public List<User> getAllUser(){
+//
+//        List<User> all = userService.getAll();
+//        if(all != null && !all.isEmpty()){
+////            return new ResponseEntity<>(HttpStatus.OK);
+//            return userService.getAll();
+//        }
+//
+//        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//    }
+    public List<User> getAllUser(){
+        return userService.getAll();
     }
 
 
